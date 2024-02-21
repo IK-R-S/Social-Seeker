@@ -25,5 +25,6 @@ else:
     print(f'Searching for {person} on the web...')
     engine = SearchEngine(person=person)
     results = engine.standard(2)
-    print(results)
+    for key, item in results():
+        print(f'{key} >>> {item}')
     
